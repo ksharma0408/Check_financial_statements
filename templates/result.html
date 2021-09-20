@@ -3,24 +3,31 @@
 <head>
 	<title></title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+	body
+	{
+    	background-image : url('/static/stock.jfif');
+    	background-size: cover;
+    	background-repeat: no-repeat;
+	}
+	</style>
 </head>
 <body>
 
 	<header>
-		<div class="container">
+		<div class="container" style = "margin-top: 180px;color: white; text-align : center; font-size : 30px">
 		<div id="brandname">
-			NLP App
+    		Prediction using Machine Learning
 		</div>
-		<h2>Financial Statements</h2>
+		<h4>Result</h4>
 		
 	</div>
 	</header>
-	<p style="font-size:20;text-align: center;"><b>Results for Financial Statement</b></p>
 	<div class="results">
 
 
 		
-	{% if prediction == 0%}
+		{% if prediction == 0%}
 	<h2 style="color:red;">Negative Statement</h2>
 	{% elif prediction == 1%}
 	<h2 style="color:Yellow;">Neutral Statement</h2>
