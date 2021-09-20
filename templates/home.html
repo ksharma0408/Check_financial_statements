@@ -4,32 +4,46 @@
 	<title>Home</title>
 	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+	<style>
+	body
+	{
+    	background-image : url('/static/stock.jfif');
+    	background-size: cover;
+    	background-repeat: no-repeat;
+	}
+	</style>
 </head>
 <body>
 
 	<header>
-		<div class="container">
+		<div class="container" style = "margin-top: 180px;color: white; text-align : center; font-size : 30px">
 		<div id="brandname">
-			Natural Language Processing App with Flask
+			Prediction using Machine Learning
 		</div>
-		<h2>Financial Statement Analysis</h2>
+		<h2>Financial Statement Review</h2>
 		
 	</div>
 	</header>
 
-	<div class="ml-container">
+	<div class="ml-container" style = "color: white; text-align : center">
 
 		<form action="{{ url_for('predict')}}" method="POST">
-		<p>Enter Your Message Here</p>
+		<p>Enter Your Reviews Here</p>
 		<!-- <input type="text" name="comment"/> -->
 		<textarea name="message" rows="6" cols="50"></textarea>
 		<br/>
 
-		<input type="submit" class="btn-info" value="predict">
+		<input type="submit" class="btn-info" value="predict" style = "color: white; text-align : center">
 		
 	</form>
 		
 	</div>
+
+	
+	
+
+</body>
+</html>
 
 	
 	
